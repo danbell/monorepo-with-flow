@@ -1,0 +1,12 @@
+{
+  "name": "@lerna-prototype/core",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@lerna-prototype/math": "1.0.0"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.72.0"
+  }
+}
