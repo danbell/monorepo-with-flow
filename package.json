@@ -1,5 +1,5 @@
 {
-  "name": "multi-module-with-lerna",
+  "name": "monorepo-with-flow",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,8 @@
     "clean": "lerna clean --yes",
     "distclean": "$npm_execpath run clean && rm -rf node_modules",
     "install-dev": "$npm_execpath run bootstrap && $npm_execpath run symlink",
-    "symlink": "flow-mono create-symlinks .packageDefaults/.flowconfig"
+    "symlink": "flow-mono create-symlinks .packageDefaults/.flowconfig",
+    "build:watch": "lerna run --parallel build:watch"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -20,8 +21,11 @@
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.8.2",
+    "flow-copy-source": "^1.3.0",
     "flow-mono-cli": "^1.3.1",
-    "lerna": "^2.11.0"
+    "lerna": "^2.11.0",
+    "rimraf": "^2.6.2",
+    "watch": "^1.0.2"
   },
   "workspaces": [
     "packages/*"

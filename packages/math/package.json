@@ -1,9 +1,20 @@
 {
-  "name": "@lerna-prototype/math",
+  "name": "@monorepo-with-flow/math",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "devDependencies": {
     "flow-bin": "^0.72.0"
+  },
+  "scripts": {
+    "build": "$npm_execpath run build:clean && $npm_execpath run build:lib && $npm_execpath run build:flow",
+    "build:clean": "rimraf lib",
+    "build:lib": "babel -d lib src --ignore '**/__tests__/**'",
+    "build:flow": "flow-copy-source -v -i '**/__tests__/**' src lib",
+    "build:watch": "watch \"$npm_execpath build\" src"
   }
 }

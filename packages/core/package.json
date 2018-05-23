@@ -1,10 +1,11 @@
 {
-  "name": "@lerna-prototype/core",
+  "name": "@monorepo-with-flow/core",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
+  "license": "UNLICENSED",
+  "private": true,
   "dependencies": {
-    "@lerna-prototype/math": "1.0.0"
+    "@monorepo-with-flow/math": "1.0.0"
   },
   "devDependencies": {
     "flow-bin": "^0.72.0"

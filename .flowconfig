@@ -1,6 +1,6 @@
 [include]
-node_modules/@lerna-prototype
+node_modules/@monorepo-with-flow
 
 [options]
-module.name_mapper='^@lerna-prototype\/\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/packages/\1/index'
+module.name_mapper='^@monorepo-with-flow\/\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/packages/\1/index'
 
