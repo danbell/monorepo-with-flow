@@ -2,12 +2,17 @@
   "name": "monorepo-with-flow",
   "version": "1.0.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danbell/monorepo-with-flow.git"
+  },
   "scripts": {
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "$npm_execpath run bootstrap:lerna && $npm_execpath run bootstrap:symlink",
+    "bootstrap:lerna": "lerna bootstrap",
+    "bootstrap:symlink": "$npm_execpath run clean:symlink && flow-mono create-symlinks .packageDefaults/.flowconfig",
     "clean": "lerna clean --yes",
-    "distclean": "$npm_execpath run clean && rm -rf node_modules",
-    "install-dev": "$npm_execpath run bootstrap && $npm_execpath run symlink",
-    "symlink": "flow-mono create-symlinks .packageDefaults/.flowconfig",
+    "clean:symlink": "rm -f packages/*/.flowconfig",
+    "distclean": "$npm_execpath run clean && $npm_execpath run clean:symlink && rm -rf node_modules",
     "build:watch": "lerna run --parallel build:watch"
   },
   "devDependencies": {
