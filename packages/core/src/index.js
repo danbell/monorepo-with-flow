@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // @flow
 
 import { abs, max, min, square } from '@monorepo-with-flow/math';
