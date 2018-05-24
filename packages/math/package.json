@@ -1,12 +1,13 @@
 {
   "name": "@monorepo-with-flow/math",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "UNLICENSED",
   "main": "lib/index.js",
   "devDependencies": {
     "flow-bin": "^0.72.0"
   },
   "scripts": {
+    "prepublish": "$npm_execpath run build",
     "build": "$npm_execpath run build:clean && $npm_execpath run build:lib && $npm_execpath run build:flow",
     "build:clean": "rimraf lib",
     "build:lib": "babel -d lib src --ignore '**/__tests__/**'",
