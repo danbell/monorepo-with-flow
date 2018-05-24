@@ -1,8 +1,7 @@
 {
   "name": "@monorepo-with-flow/math",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "license": "UNLICENSED",
-  "private": true,
   "main": "lib/index.js",
   "files": [
     "lib"
@@ -16,5 +15,9 @@
     "build:lib": "babel -d lib src --ignore '**/__tests__/**'",
     "build:flow": "flow-copy-source -v -i '**/__tests__/**' src lib",
     "build:watch": "watch \"$npm_execpath build\" src"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://localhost:4873/"
   }
 }

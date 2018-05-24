@@ -1,13 +1,16 @@
 {
   "name": "@monorepo-with-flow/core",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "license": "UNLICENSED",
-  "private": true,
   "dependencies": {
-    "@monorepo-with-flow/math": "1.0.0"
+    "@monorepo-with-flow/math": "^0.0.1"
   },
   "devDependencies": {
     "flow-bin": "^0.72.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://localhost:4873/"
   }
 }
