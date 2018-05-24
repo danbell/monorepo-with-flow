@@ -1,6 +1,6 @@
 {
   "name": "@monorepo-with-flow/core",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "lib/index.js",
   "license": "UNLICENSED",
   "scripts": {
@@ -21,7 +21,7 @@
     "lib"
   ],
   "bin": {
-    "core-cli": "./lib/cli.js"
+    "core-cli": "./lib/index.js"
   },
   "publishConfig": {
     "access": "public",
